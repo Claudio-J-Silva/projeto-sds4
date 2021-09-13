@@ -14,11 +14,6 @@ import javax.persistence.Table;
 @Table(name = "tb_sellers")
 public class Seller {
 	
-	public Seller(Long id, String name) {
-		this.id = id;
-		this.name = name;
-	}
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -29,6 +24,11 @@ public class Seller {
 	
 	public Seller() {
 		
+	}
+
+	public Seller(Long id, String name) {
+		this.id = id;
+		this.name = name;
 	}
 
 	public Long getId() {
